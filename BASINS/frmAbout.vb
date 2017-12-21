@@ -375,6 +375,7 @@ Friend Class frmAbout
                 lblConfigFile.Text = g_Project.ConfigFileName
             Catch
             End Try
+            Me.Width += 30
             Me.Show()
         Catch ex As System.Exception
             g_MapWin.ShowErrorDialog(ex)
