@@ -2082,8 +2082,8 @@ Public Module modBaseflowUtil
                     .Value(3) = "NA"
                     .Value(4) = "NA"
                 Else
-                    .Value(3) = DoubleToString(lFlowVal, , "0.00", "0.00E00")
-                    .Value(4) = DoubleToString(lTsFlowDepth.Value(I), , "0.00", "0.00E00")
+                    .Value(3) = lFlowVal.ToString() 'DoubleToString(lFlowVal, , "0.00", "0.00E00")
+                    .Value(4) = lTsFlowDepth.Value(I).ToString() 'DoubleToString(lTsFlowDepth.Value(I), , "0.00", "0.00E00")
                 End If
                 Dim lLastColumn As Integer = 4
                 If aTsGroupPart.Count > 0 Then
@@ -2319,10 +2319,10 @@ Public Module modBaseflowUtil
                     .Value(aLastColumn + 5) = lValueNA
                     .Value(aLastColumn + 6) = lValueNA
                 Else
-                    .Value(aLastColumn + 1) = DoubleToString(aBF, , "0.00", "0.00E00")
-                    .Value(aLastColumn + 2) = DoubleToString(aBFDepth, , "0.00", "0.00E00")
-                    .Value(aLastColumn + 3) = DoubleToString(lRO, , "0.00", "0.00E00")
-                    .Value(aLastColumn + 4) = DoubleToString(lRODepth, , "0.00", "0.00E00")
+                    .Value(aLastColumn + 1) = aBF.ToString() 'DoubleToString(aBF, , "0.00", "0.00E00")
+                    .Value(aLastColumn + 2) = aBFDepth.ToString() 'DoubleToString(aBFDepth, , "0.00", "0.00E00")
+                    .Value(aLastColumn + 3) = lRO.ToString() 'DoubleToString(lRO, , "0.00", "0.00E00")
+                    .Value(aLastColumn + 4) = lRODepth.ToString() 'DoubleToString(lRODepth, , "0.00", "0.00E00")
                     .Value(aLastColumn + 5) = DoubleToString(lBFPct, , "0.0")
                     .Value(aLastColumn + 6) = DoubleToString(lBFPct / 100, , "0.0000")
                 End If
